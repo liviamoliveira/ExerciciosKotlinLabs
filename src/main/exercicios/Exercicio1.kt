@@ -8,7 +8,6 @@ import kotlin.math.sqrt
 //fórmula que efetua tal cálculo é: d=(sqrt((x2 - x1).pow(2.0) + (y2 - y1).pow(2.0)))
 
 object Exercicio1 {
-
     fun calculoDistancia(x1: Double, x2: Double, y1: Double, y2: Double)
             = (sqrt((x2 - x1).pow(2.0) + (y2 - y1).pow(2.0)))
 }
