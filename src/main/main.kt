@@ -1,9 +1,6 @@
 package main
 
-import main.exercicios.Exercicio1
-import main.exercicios.Exercicio2
-import main.exercicios.Exercicio3
-import main.exercicios.Exercicio4
+import main.exercicios.*
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -13,14 +10,27 @@ fun main() {
 
     while (!sair){
         when {
-            readLineInt("Escolha exercícios de 1 a 4 ou digite 5 para sair:") == 1 -> exercicio1()
-            readLineInt("Escolha exercícios de 1 a 4 ou digite 5 para sair:") == 2 -> exercicio2()
-            readLineInt("Escolha exercícios de 1 a 4 ou digite 5 para sair:") == 3 -> exercicio3()
-            readLineInt("Escolha exercícios de 1 a 4 ou digite 5 para sair:") == 4 -> exercicio4()
-            readLineInt("Escolha exercícios de 1 a 4 ou digite 5 para sair:") == 5 -> sair = true
-            else -> println("Digite uma opção de 1 a 5")
+            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 1 -> exercicio1()
+            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 2 -> exercicio2()
+            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 3 -> exercicio3()
+            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 4 -> exercicio4()
+            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 5 -> calculadora()
+            readLineInt("SAIR:") == 6 -> sair = true
+            else -> println("Digite uma opção de 1 a 6")
         }
     }
+}
+
+
+private fun calculadora() {
+    val n1 = readLineValor("Digite um número:")
+
+    val n2 = readLineValor("Digite outro valor para somar:")
+
+    val resultadoCalculadora = Calculadora.somaNumeros(n1,n2)
+
+    println("A soma dos números é de: $resultadoCalculadora")
+    println("Fim! Obrigada")
 }
 
 private fun exercicio4(){
