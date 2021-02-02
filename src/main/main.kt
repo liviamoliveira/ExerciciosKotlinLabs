@@ -1,6 +1,7 @@
 package main
 
 import main.exercicios.*
+import java.math.RoundingMode
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -8,14 +9,17 @@ import java.util.*
 fun main() {
     var sair = false
 
-    while (!sair){
-        when {
-            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 1 -> exercicio1()
-            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 2 -> exercicio2()
-            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 3 -> exercicio3()
-            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 4 -> exercicio4()
-            readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:") == 5 -> calculadora()
-            readLineInt("SAIR:") == 6 -> sair = true
+    while (!sair) {
+
+        val menu = readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:")
+
+        when (menu) {
+            1 -> exercicio1()
+            2 -> exercicio2()
+            3 -> exercicio3()
+            4 -> exercicio4()
+            5 -> calculadora()
+            6 -> sair = true
             else -> println("Digite uma opção de 1 a 6")
         }
     }

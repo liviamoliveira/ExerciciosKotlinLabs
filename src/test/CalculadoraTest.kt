@@ -53,7 +53,7 @@ class CalculadoraTest {
     fun  `Dado que o usuário deseja calcular n1=5,6 e n2=5,8, então deve exibir o resultado=11,4`(){
         val resultadoCalculadora= Calculadora.somaNumeros(5.6, 5.8)
 
-        assertEquals(resultadoCalculadora.roundToLong(),11)
+        assertEquals(resultadoCalculadora,11.4)
     }
 
 }
