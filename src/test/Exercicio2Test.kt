@@ -4,7 +4,7 @@ import main.exercicios.Exercicio2
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class Exercicio2Teste {
+class Exercicio2Test {
 
     @Test
     fun `Dado que o usuário deseja calcular o valor de D,quando calcular, então deve exibir o resultado`(){

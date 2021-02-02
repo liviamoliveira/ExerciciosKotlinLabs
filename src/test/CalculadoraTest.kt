@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 import kotlin.math.roundToLong
 import kotlin.test.assertEquals
 
-class CalculadoraTeste {
+class CalculadoraTest {
 
     @Test
     fun `Dado que o usuário deseja calcular dois números, então deve exibir o resultado`(){

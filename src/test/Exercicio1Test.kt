@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 import kotlin.math.roundToLong
 import kotlin.test.assertEquals
 
-class Exercicio1Teste {
+class Exercicio1Test {
 
     @Test
     fun `Dado que o usuário deseja calcular a distância,quando calcular, então deve exibir o resultado`(){

@@ -6,7 +6,7 @@ import java.time.LocalDate
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 
-class Exercicio3Teste {
+class Exercicio3Test {
 
         @Test
         fun `Dado que o usuário deseja calcular a Idade em dias, quando calcular, então deve exibir o resultado`(){
