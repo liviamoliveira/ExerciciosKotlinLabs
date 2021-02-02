@@ -21,7 +21,6 @@ fun main() {
     }
 }
 
-
 private fun calculadora() {
     val n1 = readLineValor("Digite um número:")
 
