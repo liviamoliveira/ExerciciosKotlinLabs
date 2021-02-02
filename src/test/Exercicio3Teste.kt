@@ -1,12 +1,10 @@
-package teste
+package test
 
 import main.exercicios.Exercicio3
 import org.junit.jupiter.api.Test
 import java.time.LocalDate
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
-import kotlin.test.assertNotEquals
-import kotlin.test.assertTrue
 
 class Exercicio3Teste {
 

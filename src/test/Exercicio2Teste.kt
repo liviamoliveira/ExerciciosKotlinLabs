@@ -1,4 +1,4 @@
-package teste
+package test
 
 import main.exercicios.Exercicio2
 import org.junit.jupiter.api.Test

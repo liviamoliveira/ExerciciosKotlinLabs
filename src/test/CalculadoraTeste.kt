@@ -1,7 +1,8 @@
-package teste
+package test
 
 import main.exercicios.Calculadora
 import org.junit.jupiter.api.Test
+import kotlin.math.roundToLong
 import kotlin.test.assertEquals
 
 class CalculadoraTeste {
@@ -46,6 +47,13 @@ class CalculadoraTeste {
         val resultadoCalculadora= Calculadora.somaNumeros(-10.1, 5.0)
 
         assertEquals(resultadoCalculadora,-5.1)
+    }
+
+    @Test
+    fun  `Dado que o usuário deseja calcular n1=5,6 e n2=5,8, então deve exibir o resultado=11,4`(){
+        val resultadoCalculadora= Calculadora.somaNumeros(5.6, 5.8)
+
+        assertEquals(resultadoCalculadora.roundToLong(),11)
     }
 
 }
