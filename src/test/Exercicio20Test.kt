@@ -39,7 +39,22 @@ class Exercicio20Test {
 
         assertEquals(resultado, 22.41)
     }
+    @Test
+    fun `Dado que o usuário deseja calcular o preço total da compra de itens com código inexistente, então deve exibir o resultado 0`(){
 
+        val resultado = Exercicio20.calculoPrecoTotal(lista, 7623, 1)
+
+        assertEquals(resultado, 0.00)
+
+    }
+    @Test
+    fun `Dado que o usuário deseja calcular o preço total da compra de itens com quantidade 0, então deve exibir o resultado 0`(){
+
+        val resultado = Exercicio20.calculoPrecoTotal(lista, 1324, 0)
+
+        assertEquals(resultado, 0.00)
+
+    }
 
 
 

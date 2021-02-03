@@ -1,5 +1,6 @@
 package test
 
+import main.exercicios.Exercicio20
 import main.exercicios.Exercicio21
 import main.model.ProdutoEx21
 import org.junit.Before
@@ -37,8 +38,21 @@ class Exercicio21Test {
         assertEquals(resultado, 23.30)
     }
 
+    @Test
+    fun `Dado que o usuário deseja calcular o preço total da compra de itens com código inexistente, então deve exibir o resultado 0`(){
 
+        val resultado = Exercicio21.calculoPrecoTotal(lista, "ZXYA", 1)
 
+        assertEquals(resultado, 0.00)
 
+    }
+    @Test
+    fun `Dado que o usuário deseja calcular o preço total da compra de itens com quantidade 0, então deve exibir o resultado 0`(){
+
+        val resultado = Exercicio21.calculoPrecoTotal(lista, "QRST", 0)
+
+        assertEquals(resultado, 0.00)
+
+    }
 
 }
