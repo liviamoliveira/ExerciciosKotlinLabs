@@ -1,7 +1,6 @@
 package main
 
 import main.exercicios.*
-import java.math.RoundingMode
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -11,7 +10,7 @@ fun main() {
 
     while (!sair) {
 
-        val menu = readLineInt("Escolha exercícios de 1 a 5 ou digite 6 para sair:")
+        val menu = readLineInt("Escolha exercícios de 1 a 6 ou digite 7 para sair:")
 
         when (menu) {
             1 -> exercicio1()
@@ -19,10 +18,30 @@ fun main() {
             3 -> exercicio3()
             4 -> exercicio4()
             5 -> calculadora()
-            6 -> sair = true
-            else -> println("Digite uma opção de 1 a 6")
+            6 -> exercicio20()
+            7 -> sair = true
+            else -> println("Digite uma opção de 1 a 7")
         }
     }
+}
+private fun exercicio20(){
+    val produto1 = Exercicio20.addProduto(1001, 5.32)
+    val produto2 = Exercicio20.addProduto(1324, 6.45)
+    val produto3 = Exercicio20.addProduto(6548, 2.37)
+    val produto4 = Exercicio20.addProduto(987,5.32)
+    val produto5 = Exercicio20.addProduto(7623, 6.45)
+
+    val lista = listOf(produto1, produto2, produto3, produto4, produto5)
+
+    val codigo = readLineInt("Digite o código do produto:")
+
+    val qtdItem = readLineInt("Digite a quantidade de produtos que deseja deste item:")
+
+    val totalCompra = Exercicio20.calculoPrecoTotal(lista, codigo, qtdItem)
+
+    println("A sua compra ficou no valor de: R$ $totalCompra")
+    println("Fim! Obrigada")
+
 }
 
 private fun calculadora() {
