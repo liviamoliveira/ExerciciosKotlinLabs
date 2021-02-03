@@ -10,18 +10,19 @@ fun main() {
 
     while (!sair) {
 
-        val menu = readLineInt("Escolha exercícios de 1 a 7 ou digite 8 para sair:")
+        val menu = readLineInt("Escolha exercícios de 1 a 8 ou digite 9 para sair:")
 
         when (menu) {
             1 -> exercicio1()
             2 -> exercicio2()
             3 -> exercicio3()
             4 -> exercicio4()
-            5 -> calculadora()
-            6 -> exercicio20()
-            7 -> exercicio21()
-            8 -> sair = true
-            else -> println("Digite uma opção de 1 a 8")
+            5 -> exercicio5()
+            6 -> calculadora()
+            7 -> exercicio20()
+            8 -> exercicio21()
+            9 -> sair = true
+            else -> println("Digite uma opção de 1 a 9")
         }
     }
 }
@@ -66,6 +67,19 @@ private fun exercicio20(){
 
 }
 
+private fun exercicio5() {
+    val n1 = readLineValor("Digite a nota 1:")
+
+    val n2 = readLineValor("Digite a nota 2:")
+
+    val n3 = readLineValor("Digite a nota 3:")
+
+    val resultadoMediaPonderada = Exercicio5.somaNotas(n1,n2,n3)
+
+    println("A média monderada do aluno é: $resultadoMediaPonderada")
+    println("Fim! Obrigada")
+}
+
 private fun calculadora() {
     val n1 = readLineValor("Digite um número:")
 
@@ -90,7 +104,6 @@ private fun exercicio4(){
 
     println("Você nasceu em: $formato")
     println("Fim! Obrigada")
-
 }
 
 private fun exercicio3() {
