@@ -14,7 +14,7 @@ class Exercicio3Test {
 
             val totalDias = Exercicio3.calcularDias(data)
 
-            assertEquals(totalDias,61)
+            assertEquals(totalDias,63)
         }
 
         @Test

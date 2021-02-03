@@ -10,7 +10,7 @@ fun main() {
 
     while (!sair) {
 
-        val menu = readLineInt("Escolha exercícios de 1 a 6 ou digite 7 para sair:")
+        val menu = readLineInt("Escolha exercícios de 1 a 7 ou digite 8 para sair:")
 
         when (menu) {
             1 -> exercicio1()
@@ -19,11 +19,33 @@ fun main() {
             4 -> exercicio4()
             5 -> calculadora()
             6 -> exercicio20()
-            7 -> sair = true
-            else -> println("Digite uma opção de 1 a 7")
+            7 -> exercicio21()
+            8 -> sair = true
+            else -> println("Digite uma opção de 1 a 8")
         }
     }
 }
+
+private fun exercicio21(){
+    val produto1 = Exercicio21.addProduto("ABCD", 5.30)
+    val produto2 = Exercicio21.addProduto("XYPK", 6.00)
+    val produto3 = Exercicio21.addProduto("KLMP", 3.20)
+    val produto4 = Exercicio21.addProduto("QRST",2.50)
+
+    val lista = listOf(produto1, produto2, produto3, produto4)
+
+    val codigo = readLineTexto("Digite o código do produto:")
+
+    val qtdItem = readLineInt("Digite a quantidade de produtos que deseja deste item:")
+
+    val totalCompra = Exercicio21.calculoPrecoTotal(lista, codigo, qtdItem)
+
+    println("A sua compra ficou no valor de: R$ $totalCompra")
+    println("Fim! Obrigada")
+
+}
+
+
 private fun exercicio20(){
     val produto1 = Exercicio20.addProduto(1001, 5.32)
     val produto2 = Exercicio20.addProduto(1324, 6.45)

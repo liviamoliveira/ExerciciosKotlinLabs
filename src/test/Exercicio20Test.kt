@@ -1,7 +1,7 @@
 package test
 
 import main.exercicios.Exercicio20
-import main.model.Produto
+import main.model.ProdutoEx20
 import org.junit.Before
 import org.junit.Test
 import kotlin.test.assertEquals
@@ -9,7 +9,7 @@ import kotlin.test.assertEquals
 
 class Exercicio20Test {
 
-    private lateinit var lista: List<Produto>
+    private lateinit var lista: List<ProdutoEx20>
 
     @Before
     fun setup(){
@@ -39,6 +39,7 @@ class Exercicio20Test {
 
         assertEquals(resultado, 22.41)
     }
+
 
 
 
