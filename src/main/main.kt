@@ -1,6 +1,10 @@
 package main
 
 import main.exercicios.*
+import main.model.Pessoa
+import main.model.Sexo
+import main.repository.PessoaRepository
+import java.math.BigDecimal
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -10,7 +14,7 @@ fun main() {
 
     while (!sair) {
 
-        val menu = readLineInt("Escolha exercícios de 1 a 8 ou digite 9 para sair:")
+        val menu = readLineInt("Escolha exercícios de 1 a 9 ou digite 10 para sair:")
 
         when (menu) {
             1 -> exercicio1()
@@ -21,10 +25,30 @@ fun main() {
             6 -> calculadora()
             7 -> exercicio20()
             8 -> exercicio21()
-            9 -> sair = true
-            else -> println("Digite uma opção de 1 a 9")
+            9 -> exercicioClasses()
+            10 -> sair = true
+            else -> println("Digite uma opção de 1 a 10")
         }
     }
+}
+
+private fun exercicioClasses(){
+
+    val pessoa1 = Pessoa(
+        12, "João",
+        Sexo.MASCULINO,
+        "000.001.000-34",
+        "MG-01.023.123",
+        LocalDate.now(),
+        BigDecimal("1.64"),
+        BigDecimal("52.5"),
+        "0123-456789")
+
+    PessoaRepository.add(pessoa1)
+
+    val pessoaAdd = PessoaRepository.getById(pessoa1.id)
+    println(pessoaAdd.nome)
+
 }
 
 private fun exercicio21(){

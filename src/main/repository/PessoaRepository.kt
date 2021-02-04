@@ -2,12 +2,13 @@ package main.repository
 
 import main.model.Pessoa
 
-class PessoaRepository {
+object PessoaRepository {
 
-    private lateinit var listaPessoas: MutableList<Pessoa>
+    private var listaPessoas: MutableList<Pessoa> = arrayListOf()
 
-    fun add(pessoa: Pessoa) {
+    fun add(pessoa: Pessoa): Int {
         listaPessoas.add(pessoa)
+        return pessoa.id
     }
 
     fun getAll(): List<Pessoa> {
