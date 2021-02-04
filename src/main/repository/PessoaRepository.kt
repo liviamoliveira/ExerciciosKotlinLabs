@@ -1,7 +1,6 @@
 package main.repository
 
 import main.model.Pessoa
-import kotlin.reflect.jvm.internal.impl.util.ModuleVisibilityHelper
 
 class PessoaRepository {
 
@@ -26,7 +25,10 @@ class PessoaRepository {
     fun findByCPF(cpf: String): Pessoa {
         return listaPessoas.first{ pessoa ->  pessoa.cpf == cpf}
     }
-//    fun findBy(){}
+
+    fun findBy(search: (pessoa: Pessoa) -> Boolean): List<Pessoa> {
+        return listaPessoas.filter { search.invoke(it) }
+    }
 
     fun update(pessoa: Pessoa){
         val posicao = listaPessoas.indexOf(pessoa)
