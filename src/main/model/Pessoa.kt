@@ -10,8 +10,8 @@ data class Pessoa (
     val cpf: String,
     val rg: String,
     val dataNascimento: LocalDate,
-    val altura: BigDecimal,
-    val peso: BigDecimal,
+    val altura: BigDecimal?,
+    val peso: BigDecimal?,
     val telefone: String
 )
 
