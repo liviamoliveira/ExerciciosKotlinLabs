@@ -42,7 +42,9 @@ object PessoaRepository {
 
     fun delete(id: Int) {
         val pessoa = getById(id)
-        listaPessoas.remove(pessoa)
+
+        if (pessoa != null)
+            listaPessoas.remove(pessoa)
     }
 
     private fun verificaDados(pessoa: Pessoa): Boolean {
@@ -57,9 +59,6 @@ object PessoaRepository {
             return false
 
         if (!verificaNumeroTelefone(pessoa))
-            return false
-
-        if (!verificaDataNascimento(pessoa))
             return false
 
         return true
@@ -99,13 +98,10 @@ object PessoaRepository {
     }
 
     private fun verificaNumeroTelefone(pessoa: Pessoa): Boolean {
-        val verificaNumeroTelefone = pessoa.telefone.replace("(", "").replace(")", "").replace("-", "")
-        return true
-        return false
-    }
+        val telefone = pessoa.telefone
 
-    private fun verificaDataNascimento(pessoa: Pessoa): Boolean {
-        val verificaDataNascimento = pessoa.dataNascimento
+        if (telefone.isBlank()) return false
+
         return true
     }
 
