@@ -26,6 +26,7 @@ class PessoaRepository {
     fun findByCPF(cpf: String): Pessoa {
         return listaPessoas.first{ pessoa ->  pessoa.cpf == cpf}
     }
+    fun findBy(){}
 
     fun update(pessoa: Pessoa){
         val posicao = listaPessoas.indexOf(pessoa)
