@@ -6,9 +6,12 @@ object PessoaRepository {
 
     private var listaPessoas: MutableList<Pessoa> = arrayListOf()
 
+    private var sequenceId: Int = 0
+
     fun add(pessoa: Pessoa): Int {
         listaPessoas.add(pessoa)
-        return pessoa.id
+        sequenceId++
+        return sequenceId
     }
 
     fun getAll(): List<Pessoa> {
