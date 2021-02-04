@@ -56,14 +56,16 @@ private fun exercicio20(){
 
     val lista = listOf(produto1, produto2, produto3, produto4, produto5)
 
-    val codigo = readLineInt("Digite o código do produto:")
 
-    val qtdItem = readLineInt("Digite a quantidade de produtos que deseja deste item:")
-
-    val totalCompra = Exercicio20.calculoPrecoTotal(lista, codigo, qtdItem)
-
-    println("A sua compra ficou no valor de: R$ $totalCompra")
-    println("Fim! Obrigada")
+//
+//    val codigo = readLineInt("Digite o código do produto:")
+//
+//    val qtdItem = readLineInt("Digite a quantidade de produtos que deseja deste item:")
+//
+//    val totalCompra = Exercicio20.calculoPrecoTotal(lista, codigo, qtdItem)
+//
+//    println("A sua compra ficou no valor de: R$ $totalCompra")
+//    println("Fim! Obrigada")
 
 }
 
