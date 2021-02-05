@@ -47,7 +47,13 @@ private fun exercicioClasses(){
     PessoaRepository.add(pessoa1)
 
     val pessoaAdd = PessoaRepository.getById(pessoa1.id)
-    println(pessoaAdd.nome)
+
+    val resultadoIMC = CalculoIMC.formula(pessoa1)
+    val pessoa = readLineTexto("Olá ${pessoa1.nome}, seu IMC é de: $resultadoIMC")
+
+    val alturaNula = readLineTexto("Olá ${pessoa1.nome}, você não possui altura cadastrada.")
+    val pesoNula = readLineTexto("Olá ${pessoa1.nome}, você não possui peso cadastrado.")
+
 
 }
 
