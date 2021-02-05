@@ -1,10 +1,7 @@
 package main.exercicios
 
 import main.model.Pessoa
-import main.model.ProdutoEx20
-import java.math.BigDecimal
 import java.math.RoundingMode
-import kotlin.math.pow
 
 object CalculoIMC {
     fun formula(pessoa: Pessoa): Double {

@@ -40,7 +40,7 @@ private fun exercicioClasses(){
         "000.001.000-34",
         "MG-01.023.123",
         LocalDate.now(),
-        BigDecimal("1.64"),
+        BigDecimal("1.52"),
         BigDecimal("52.5"),
         "0123-456789")
 
